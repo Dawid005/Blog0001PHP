@@ -18,11 +18,11 @@
 <body>
     <div id="container">
         <div id="catalog">
-            <a href="Marek.php">See posts created by Marek</a>
+            <a href="Mareksee.php">See posts created by Marek</a>
             <br />
-            <a href="Piotr.php">See posts created by Piotr</a>
+            <a href="Piotrsee.php">See posts created by Piotr</a>
             <br />
-            <a href="Kamil.php">See posts created by Kamil</a>
+            <a href="Kamilsee.php">See posts created by Kamil</a>
         </div>
 
         <div id="Menu">

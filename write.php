@@ -18,11 +18,31 @@
     
 </head>
         <?php
+            require_once "connectionMysql.php";
+
             session_start();
                 if(!isset($_SESSION['logedIn']) && $_SESSION['logedIn']!==true){
                     header('Location: index.php');
                 }
+            
+                if($_SESSION['logedIn'] == true){ 
 
+                    if($_SESSION['nick'] == "Marek"){
+                        header('Location: Marek.php');
+                    }   
+
+                    elseif($_SESSION['nick'] == "Kamil"){
+                        header('Location: Kamil.php');
+                    }
+                    
+                    elseif($_SESSION['nick'] == "Piotr"){
+                        header('Location: Piotr.php');
+                    }
+                    
+                    else{
+                        header('Location: index.php');
+                    }
+                }
         ?>
 <body>
     
