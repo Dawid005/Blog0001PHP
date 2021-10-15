@@ -1,7 +1,7 @@
 <?php
 
-    require_once ('sqlQuery.php');
+session_start();
 
-    $sql = "SELECT content FROM kamil_posts";
+$_SESSION['nickSee']="kamil";
 
-    sqlQuery($sql);
+header('Location: usersSeePost.php');

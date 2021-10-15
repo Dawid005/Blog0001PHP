@@ -1,16 +1,7 @@
 <?php
 
-    session_start();
+session_start();
 
-    if($_SESSION['logedIn']==true && isset($_SESSION['logedIn'])){
-        $_SESSION['nickSee']=$_SESSION['nick'];
+$_SESSION['nickSee']="piotr";
 
-        require_once ('sqlQueryShow.php');
-
-        $sql = "SELECT content FROM piotr_posts";
-
-        sqlQueryShow($sql);
-
-        header('Location: usersSeePost.php');
-
-    }
+header('Location: usersSeePost.php');
