@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="container">
-        <form method="post" action="Kamil2.php">
+        <form method="post" action="userMakePost.php">
             Right here content of post:
             <br /> 
             <input type="text" name="content">

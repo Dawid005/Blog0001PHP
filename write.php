@@ -18,7 +18,7 @@
     
 </head>
         <?php
-            require_once "connectionMysql.php";
+            //require_once "connectionMysql.php";
 
             session_start();
                 if(!isset($_SESSION['logedIn']) && $_SESSION['logedIn']!==true){

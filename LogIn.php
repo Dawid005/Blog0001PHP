@@ -6,8 +6,6 @@ session_start();
         header('Location: index.php');
     }
 
-    require_once "connectionMysql.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +42,7 @@ session_start();
     </div>
 
     <?php
+        require_once 'connectMysql.php';
 
         @$nick = $_POST['nick'];
         @$password = $_POST['password'];
@@ -55,6 +54,7 @@ session_start();
 
         try
         {
+            $connection = new DataBase("localhost", "root","", "blog0001" );
             $conn = new mysqli($connection->host, $connection->db_user, $connection->db_password, $connection->db_name);
             if($conn -> connect_errno)
             {   

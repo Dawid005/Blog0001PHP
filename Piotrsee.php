@@ -1,7 +1,16 @@
 <?php
 
-    require_once ('sqlQuery.php');
+    session_start();
 
-    $sql = "SELECT content FROM piotr_posts";
+    if($_SESSION['logedIn']==true && isset($_SESSION['logedIn'])){
+        $_SESSION['nickSee']=$_SESSION['nick'];
 
-    sqlQuery($sql);
+        require_once ('sqlQueryShow.php');
+
+        $sql = "SELECT content FROM piotr_posts";
+
+        sqlQueryShow($sql);
+
+        header('Location: usersSeePost.php');
+
+    }
